@@ -102,7 +102,7 @@ fn scan(
             }
 
             Scope::LambdaArg(name, _) => {
-                replacement = Some(format!("_{}", name.as_str()));
+                replacement = Some(name.as_str().to_string());
             }
 
             Scope::LetIn(let_in) => {
